@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Nombres fijos
-PORT1=8080:8080  # Puerto de la aplicación
-PORT2=1935:1935  # Puerto RTMP
-PORT3=1936:1936  # Puerto RTSP
-PORT4=6000:6000  # Puerto SRT
+
 
 SCRIPT_DIR=$(dirname "$0")  # Obtiene el directorio del script
 
@@ -48,7 +44,7 @@ docker build --build-arg FFMPEG_IMAGE=myffmpeg --build-arg CORE_IMAGE=mycore --b
 
 # Iniciar el nuevo contenedor
 echo "Iniciando el nuevo contenedor..."
-docker run -it --rm --name streaminghub --restart=always -p $POR1 -p $POR2 -p $POR3 -p $POR4 myrestreamer
+docker run -it --rm --name streaminghub --restart=always -p 8080:8080 -p 1935:1935 -p 1936:1936-p 6000:6000 myrestreamer
 
 # Limpiar imágenes "dangling"
 echo "Limpiando imágenes sin usar..."

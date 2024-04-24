@@ -379,7 +379,7 @@ export default function Footer(props) {
 						<Stack className="footerLeft" direction="row" alignItems="center" spacing={0}>
 							<Logo className={classes.logo} />
 							<Typography className="footerVersion">
-								{props.app} v{version.number} ({version.arch}) {props.name ? '- ' + props.name : ''}
+								Online
 							</Typography>
 						</Stack>
 						<Resources resources={props.resources} />

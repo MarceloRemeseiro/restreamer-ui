@@ -44,7 +44,7 @@ docker build --build-arg FFMPEG_IMAGE=myffmpeg --build-arg CORE_IMAGE=mycore --b
 
 # Iniciar el nuevo contenedor
 echo "Iniciando el nuevo contenedor..."
-docker run -it --rm --name streaminghub --restart=always -p 8080:8080 -p 1935:1935 -p 1936:1936-p 6000:6000 myrestreamer
+docker run -it --rm --name streaminghub --restart=always -p 8080:8080 -p 1935:1935 -p 1936:1936 -p 6000:6000 myrestreamer
 
 # Limpiar imágenes "dangling"
 echo "Limpiando imágenes sin usar..."

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import base from './base';
-import universe from '../assets/images/universe-4609408.jpg';
+import universe from '../assets/images/universe-4609408.png';
 
 export default {
 	html: {

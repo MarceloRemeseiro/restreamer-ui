@@ -165,47 +165,47 @@ function AboutModal(props) {
 
 	return (
 		<Modal open={props.open} onClose={props.onClose} className="modal">
-			<ModalContent title="About datarhei Restreamer" onClose={props.onClose} className={classes.modalPaper}>
+			<ModalContent title="About datarhei StreamingHUB" onClose={props.onClose} className={classes.modalPaper}>
 				<Grid container spacing={1}>
 					<Grid item xs={12} className={classes.aboutImage}>
-						<PaperThumb image={welcomeImage} title="Welcome to Restreamer v2" height="200px" />
+						<PaperThumb image={welcomeImage} title="Welcome to StreamingHUB v2" height="200px" />
 					</Grid>
 					<Grid item xs={12}>
 						<Typography variant="body1">
 							This is the frontend and a part of a free open source livestreaming solution for video data. The second part is the{' '}
-							<Link color="secondary" href="https://github.com/datarhei/core" target="_blank">
-								datarhei Core
+							<Link color="secondary" href="https://streamingpro.es" target="_blank">
+								Streaming Pro
 							</Link>{' '}
 							which can be operated separately.
 						</Typography>
 					</Grid>
 					<Grid item xs={12}></Grid>
 					<Grid item xs={12}>
-						<Typography>
+						{/* <Typography>
 							<strong>Release</strong>: {Version.UI}
 						</Typography>
 						<Typography>
 							<strong>Repo</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://github.com/datarhei/restreamer">
-								github.com/datarhei/restreamer
+							<Link color="secondary" target="_blank" href="https://github.com/datarhei/StreamingHUB">
+								github.com/datarhei/StreamingHUB
 							</Link>
-						</Typography>
-						<Typography>
+						</Typography> */}
+						{/* <Typography>
 							<strong>Licence</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://github.com/datarhei/restreamer/blob/master/LICENSE">
+							<Link color="secondary" target="_blank" href="https://github.com/datarhei/StreamingHUB/blob/master/LICENSE">
 								Apache License 2.0
 							</Link>
-						</Typography>
-						<Typography>
+						</Typography> */}
+						{/* <Typography>
 							<strong>Donation</strong>:{' '}
 							<Link color="secondary" target="_blank" href="https://patreon.com/datarhei/">
 								patreon.com/datarhei
 							</Link>
-						</Typography>
+						</Typography> */}
 						<Typography>
 							<strong>Website</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://datarhei.com">
-								datarhei.com
+							<Link color="secondary" target="_blank" href="https://streaminpro.es">
+								streaminpro.es
 							</Link>
 						</Typography>
 					</Grid>
@@ -276,19 +276,19 @@ function HeaderMenu(props) {
 						</MenuItem>
 					)}
 					<Divider />
-					<MenuItem onClick={() => setAbout(true)}>
+					{/* <MenuItem onClick={() => setAbout(true)}>
 						<ListItemIcon>
 							<RocketLaunchIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>About</Trans>
 					</MenuItem>
-					<MenuItem component="a" href="https://docs.datarhei.com/restreamer" target="blank">
+					<MenuItem component="a" href="https://docs.datarhei.com/StreamingHUB" target="blank">
 						<ListItemIcon>
 							<HelpOutlineIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>Docs</Trans>
 					</MenuItem>
-					<MenuItem component="a" href="https://github.com/datarhei/restreamer/issues" target="blank">
+					<MenuItem component="a" href="https://github.com/datarhei/StreamingHUB/issues" target="blank">
 						<ListItemIcon>
 							<BugReportIcon fontSize="small" />
 						</ListItemIcon>
@@ -299,7 +299,7 @@ function HeaderMenu(props) {
 							<TranslateIcon fontSize="small" />
 						</ListItemIcon>
 						<LanguageSelect onChange={handleLanguageChange} />
-					</MenuItem>
+					</MenuItem> */}
 					<MenuItem onClick={props.onLogout}>
 						<ListItemIcon>
 							<Logout fontSize="small" />
@@ -317,24 +317,24 @@ function HeaderMenu(props) {
 					<MenuOpenIcon className="fabIcon" />
 				</Fab>
 				<StyledMenu anchorEl={$anchorEl} open={$anchorEl !== null} onClose={handleMenuClose} onClick={handleMenuClose}>
-					<MenuItem onClick={() => setAbout(true)}>
+					{/* <MenuItem onClick={() => setAbout(true)}>
 						<ListItemIcon>
 							<RocketLaunchIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>About</Trans>
-					</MenuItem>
-					<MenuItem component="a" href="https://docs.datarhei.com/restreamer" target="blank">
+					</MenuItem> */}
+					{/* <MenuItem component="a" href="https://docs.datarhei.com/StreamingHUB" target="blank">
 						<ListItemIcon>
 							<HelpOutlineIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>Docs</Trans>
-					</MenuItem>
-					<MenuItem component="a" href="https://github.com/datarhei/restreamer/issues" target="blank">
+					</MenuItem> */}
+					{/* <MenuItem component="a" href="https://github.com/datarhei/StreamingHUB/issues" target="blank">
 						<ListItemIcon>
 							<BugReportIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>Issue alert</Trans>
-					</MenuItem>
+					</MenuItem> */}
 					<MenuItem>
 						<ListItemIcon>
 							<TranslateIcon fontSize="small" />
@@ -369,7 +369,7 @@ export default function Header(props) {
 				<Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
 					<Stack direction="row" alignItems="center" spacing={0} className="headerLeft">
 						<Logo className="fabIcon" />
-						<Typography className="headerTitle">Restreamer</Typography>
+						<Typography className="headerTitle">StreamingHUB</Typography>
 					</Stack>
 					<Stack className="headerRight" direction="row" alignItems="center" spacing={0}>
 						<HeaderMenu {...props}></HeaderMenu>

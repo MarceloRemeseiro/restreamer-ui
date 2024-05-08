@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Función para eliminar una imagen Docker si existe
-remove_docker_image() {
-    local image=$1
-    if [ "$(docker images -q "$image")" ]; then
-        echo "Eliminando la imagen Docker $image..."
-        docker rmi "$image"
-    else
-        echo "No existe la imagen $image, se procederá a crearla."
-    fi
-}
-
 # Detener y eliminar el contenedor si está corriendo
 if [ "$(docker ps -q -f name=streaminghub)" ]; then
     echo "Deteniendo y eliminando el contenedor actual..."
@@ -20,8 +9,15 @@ else
     echo "No existe el contenedor streaminghub, se creará uno nuevo."
 fi
 
-# Verificar y manejar la imagen de myrsui
-remove_docker_image myrsui
+# Función para eliminar una imagen Docker si existe
+remove_docker_image() {
+    if [ "$(docker images -q "myrsui")" ]; then
+        echo "Eliminando la imagen Docker myrsui..."
+        docker rmi "myrsui"
+    else
+        echo "No existe la imagen myrsui, se procederá a crearla."
+    fi
+}
 
 # Verificar la existencia del directorio y actualizar el código fuente
 if [ -d "/home/mabedev/restreamer-ui" ]; then

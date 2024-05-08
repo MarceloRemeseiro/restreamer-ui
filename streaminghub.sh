@@ -23,7 +23,7 @@ remove_docker_image() {
 if [ -d "/home/mabedev/restreamer-ui" ]; then
     echo "Actualizando el código fuente desde Git en /home/mabedev/restreamer-ui..."
     cd /home/mabedev/restreamer-ui
-    git pull
+    sudo git pull
     if [ $? -ne 0 ]; then
         echo "Fallo al actualizar el código fuente, abortando..."
         exit 1
